@@ -4,9 +4,13 @@ This is a 'Ready-to-Use' Symfony 5 Project which includes Bootstrap 5, SASS and 
 
 manipulations the url, so 'myProject/public/index.php/helloWorld' turns into 'myProject/helloWorld'.
 
-For the working stylesheets (in general building the assets) I recommend running 'yarn encore dev-server'. This will allow you to update your 
+After forking run following commands:
 
-code without refreshing the page.
+    composer install
+    npm install
+
+For compiling of the webpack assets directory I recommend using 'npm run watch'
+
 
 Or you can use the following screenshot  
 
@@ -15,5 +19,6 @@ Or you can use the following screenshot
 
 (https://symfony.com/doc/current/frontend/encore/simple-example.html)
 
+Any Styling or JavaScripts have to be in the assets directory and atleast called in app.js or app.scss
 
 Have fun !
