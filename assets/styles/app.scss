@@ -1,0 +1,30 @@
+/* the ~ allows you to reference things in node_modules*/
+@import "~bootstrap";
+@font-face{
+    font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('fonts/Work_Sans/static/WorkSans-Regular.ttf');
+}
+@font-face{
+    font-family: 'Playfair Display';
+      font-style: normal;
+      src: url('fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+}
+@font-face{
+    font-family: 'Playfair Display';
+      font-style: italic;
+      src: url('fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf');
+}
+@font-face{
+    font-family: 'Playfair Display';
+    font-weight: 900;
+      font-style: normal;
+      src: url('fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf');
+}
+body
+{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+}

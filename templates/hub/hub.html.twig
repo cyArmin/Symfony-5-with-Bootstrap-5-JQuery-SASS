@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+       
+       <title>Hub Area</title>
+    </head>
+    <body>
+        <section>
+            {% block navbar %}
+                {% include 'Navbar/navbar.html.twig' %}
+            {% endblock %}
+        </section>
+        <button type="button" class="btn btn-primary">Debug</button>
+    </body>
+</html>
