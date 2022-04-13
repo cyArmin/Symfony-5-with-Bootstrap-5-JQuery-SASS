@@ -1,8 +1,0 @@
-# app/config/parameters.yml
-parameters:
-  database_host:     localhost
-  database_name:     usr_web51_24
-  database_user:     web51
-  database_password: 76LgQtgI
-
-# ...
