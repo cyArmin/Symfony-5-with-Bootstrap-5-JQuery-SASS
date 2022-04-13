@@ -1,0 +1,30 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+{% endblock %}
+{# templates/login/index.html.twig #}
+
+
+{# ... #}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <div class="outer--conatiner--login">
+            <h2 class="header--login">Anmeldung</h2>
+            <form action="{{ path('login') }}" method="post">
+                    <label class="form-field" for="username">Email:</label>
+                    <input class="form-field" type="text" id="username" name="_username" value="{{ last_username }}"/>
+
+                    <label class="form-field" for="password">Password:</label>
+                    <input class="form-field" type="password" id="password" name="_password"/>
+
+                    {# If you want to control the URL the user is redirected to on success
+                    <input type="hidden" name="_target_path" value="/account"/> #}
+
+                    <button class="form-field" type="submit">login</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

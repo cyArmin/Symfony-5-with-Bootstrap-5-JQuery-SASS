@@ -1,0 +1,72 @@
+<!--
+/**
+* Spanish Vocab Trainer with Symfony
+*
+* Last Update: 20.10.2021
+*
+* Autor: Armin Saderi
+**/
+-->
+<html lang="de">
+    <head>
+        <title>Vokabeltrainer</title>
+        <meta charset="utf-8"/>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}"/> <!-- give time method as parameter to prevent cache -->
+        {% endblock %}
+    </head>
+    <body>
+    <div class="body">
+        <h1>Willkommen beim Spanisch-Vokabeltrainer</h1>
+        <!--
+            Output of vocabulary list in a table starts here
+        -->
+        <div class="spreadsheet">
+            <h2 id="listHeader" style="padding-left:30%;text-decoration:underline;">Vokabelliste</h2>
+            <form>
+                <table id="table">
+                    <tbody class="table_body">
+                        <!--
+                            Generate list of Words with for loop
+                        -->
+                        {% for vocab in vocabs %}
+                           <tr>
+                               <td><b>{{ vocab.spanish }}</b></td>
+                           </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            <a href="{{ path('dashboard') }}"> Bearbeiten </a>
+            <!--
+                Bearbeiten Button !
+             -->
+        </div>
+        <!--########## QUESTION FUNCTION STARTS HERE ############-->
+
+        <div class="text">
+            <form action="" method="post" id="abfrage" data-ajax-url="{{ path('compare_vocs') }}">
+                <p>Hier deine Vokabel: <b id="askedVocab">{{ spanish_random_word }}</b> </p>
+                <input type="hidden" id="vergleich" name="vergleich" value="{{ compare_id }}">
+                <input type="text" id="antwort" name="antwort" size="50">
+                <input type="submit" id="button" value="Prüfen" size="50">
+            </form>
+        </div>
+        <!-- Flag design -->
+        <div class="flag">
+            <div class="rot">
+                <div>
+                    <p id="answer"> <!-- answer --></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gelb">
+        </div>
+
+        <div class="rot">
+        </div>
+    </div>
+        <script src="js/ajax.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>{% if page_title is defined %} {{ page_title }} | {% endif %} Hub Area</title>
+       
+       {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+       {% endblock %}
+
+       {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+       {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <h2 class="normal">Debug (N)</h2>
+        <h2 class="italic">Debug (I)</h2>
+        <h2 class="bold">Debug (B)</h2>
+        
+        <p class="normal">Debug (N)</p>
+        <p class="italic">Debug (I)</p>
+        <p class="bold">Debug (B)</p>
+        {% endblock %}
+    </body>    
+</html>
+
+
